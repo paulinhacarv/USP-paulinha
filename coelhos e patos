@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    float patas, cabecas, patos, coelhos;
+    
+    printf("\n informe a quantidade de patas");
+    scanf("%f", &patas);
+    
+    printf("\n informe a quantidade de cabecas");
+    scanf("%f", &cabecas);
+    
+    patos=((-patas)+(4*cabecas))/2;
+    coelhos=((-2)*cabecas+patas)/2;
+    
+    
+    printf("\n numero de coelhos= %f\n", coelhos );
+    printf("\n numero de patos= %f\n", patos );
+    return 0;
+}
