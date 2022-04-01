@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+    float area, base, altura;
+    printf("\n informe a base");
+    scanf("%f", &base);
+    printf("\n informe a altura");
+    scanf("%f", &altura);
+    area=(base*altura)/2;
+    printf("\n a area= %f\n", area);
+    return 0;
+}
