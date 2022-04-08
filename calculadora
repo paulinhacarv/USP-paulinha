@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main(){
+    char k;
+    float x, y, z;
+
+
+    printf("\n digite o primeiro valor");
+    scanf("%f", &x);
+
+    printf("\n digite a operacao");
+    scanf(" %c", &k);
+
+    printf("\n digite o segundo valor");
+    scanf("%f", &y);
+
+
+    switch(k)
+    {
+     case'+': z=(x)+(y);
+         printf("resultado = %f\n", z);
+         break;
+
+     case'-': z=(x)-(y);
+         printf("resultado = %f\n", z);
+         break;
+
+     case'*': z=(x)*(y);
+         printf("resultado = %f\n", z);
+         break;
+
+     case'/': z=(x)/(y);
+         printf("resultado = %f\n", z);
+         break;
+
+     default:
+        printf("\n nao faz parte das operacoes basicas");
+    }
+
+    return 0;
+}
