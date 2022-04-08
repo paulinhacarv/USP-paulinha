@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+    float distancia, litros, consumo;
+
+    printf("\n digite a distancia em KM");
+    scanf("%f", &distancia);
+
+    printf("\n digite a quantidade de litros");
+    scanf("%f", &litros);
+
+    consumo=distancia/litros;
+
+    if(consumo<8){
+        printf("\n venda o carro!");
+        printf("\n o consumo = %f\n", consumo);
+    }
+
+    else if(consumo>8 || consumo<14){
+        printf("\n economico!");
+        printf("\n o consumo = %f\n", consumo);
+    }
+    else if(consumo>14);{
+        printf("\n super economico!");
+        printf("\n o consumo = %f\n", consumo);
+}
+    return 0;
+    }
