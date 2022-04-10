@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{   
+    float a, b, c;
+  // receber o tamanho dos lados do triangulo
+  
+    printf("\n informe o lado a");
+    scanf("%f", &a);
+    
+    printf("\n informe o lado b");
+    scanf("%f", &b);
+    
+    printf("\n informe o lado c");
+    scanf("%f", &c);
+    
+  // analise do triangulo
+  
+    if(a==b && b==c){
+       printf("\n o triangulo e equilatero");
+    }   
+       
+           if(a==b && b!=c || a==c && a!=b || c==b && b!=a){
+             printf("\n o triangulo e isosceles");
+       }   
+           
+               if (a!=b && a!=c && c!=b){
+               printf("\n o triangulo é escaleno");
+           }
+
+    return 0;
+}
