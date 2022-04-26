@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int main(){
+
+    float x=0, media, porcentagem, somatoria;
+    float alta, baixa=-1;
+
+    while(x>=0){
+
+
+        if(x>=5){
+                alta=alta+1;
+        }
+         else(baixa=baixa+1);
+
+        somatoria=somatoria+x;
+        media=somatoria/(baixa+alta);
+        porcentagem=(alta*100)/(baixa+alta);
+
+        printf("\n nota:");
+        scanf("%f", &x);
+
+
+    }
+
+        printf("\n a media= %f\n", media);
+        printf("\n a porcentagem de notas altas= %f\n", porcentagem);
+        int alta2=alta;
+        int baixa2=baixa;
+        printf("\n o numero de notas altas= %d\n", alta2);
+        printf("\n o numero de notas baixas= %d\n", baixa2);
+
+    return 0;
+}
