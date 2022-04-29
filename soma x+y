@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    float x, y, z;
+    
+    printf("\n informe o primeiro numero(x)\t");
+    scanf("%f", &x); 
+    
+    printf("\n informe o segundo numero(y)\t");
+    scanf("%f", &y); 
+    
+    z=x+y;
+    
+   
+    printf("\n %f + %f = %f", x, y, z);
+   
+    
+    return 0;
+}
