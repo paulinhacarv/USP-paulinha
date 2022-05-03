@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main(){
+     float numero, y=0;
+
+    printf("\n insira o numero  ");
+    scanf("%f", &numero);
+
+    // y é o a quantidade de algarismos de "numero"
+
+    for(numero=numero; numero>10; numero/10){
+    numero=numero/10;
+
+  }
+
+        printf("numero=%f", numero);
+
+   return 0;
+}
