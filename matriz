@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+#define LIN 3
+#define COL 3
+
+
+    int main(){
+        int mat[LIN][COL],linha, coluna;
+        srand(time(NULL));
+
+        for(linha=0; linha<LIN ;linha++){
+         for(coluna=0; coluna<COL ; coluna++){
+            mat[linha][coluna]=rand()%10;
+            printf("\t%d", mat[linha][coluna]);
+
+            }
+            printf("\n\n");
+        }
+
+    return 0;
+
+}
