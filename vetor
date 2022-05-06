@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+#include<limits.h>
+#define SIZE 20
+
+
+    int main(){
+        int arr[SIZE], maximo1, maximo2, x;
+        srand(time(NULL));
+
+        for(x=0; x<SIZE ;x++){
+            arr[x]=rand()%20;
+
+            }
+
+            maximo1=maximo2=INT_MIN;
+            for(x=0; x<SIZE ;x++){
+                printf("\t%d", arr[x]);
+            }
+
+            if(arr[x]>maximo1){
+                maximo2=maximo1;
+                maximo1=arr[x];
+            }
+            else if(arr[x]>maximo2 && arr[x]<maximo1)
+                maximo2=arr[x];
+                printf("o maior valor = %d\n", maximo1);
+                printf("o segundo maior valor = %d\n", maximo1);
+    return 0;
+
+}
