@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<limits.h>
+#define COL3 
+#define LINHA3 
+
+    int main(){
+        
+        int X=0, O, marcador1, LINHA, COL;
+        int mat[LINHA][COL];
+        
+        printf("\n vamos começar o jogo\f");
+        printf("\n jogador 1 escolha entre X e O  ");
+        scanf("%d", &marcador1);
+    
+        if(marcador1==0){
+            printf("\n jogador 2 joga com O");
+        }
+        else if (marcador1!=0){
+            printf("\n jogador 2 jogas com X");
+        }
+        
+            printf("\n vez do jogador 1");
+           
+            printf("\n insira o numero da linha desejada");
+            scanf("%d", &mat[LINHA]);
+             
+             printf("\n insira o numero da coluna desejada");
+             scanf("%d", &mat[COL]);
+            
+            while(COL<=3 && LINHA<=3 ){
+                
+            mat[LINHA][COL]=X;
+            printf("\t%d",mat[LINHA][COL]);
+            }
+            
+            
+    return 0;
+
+}
+
