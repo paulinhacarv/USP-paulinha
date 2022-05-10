@@ -1,24 +1,40 @@
-#include<stdio.h>
-#include<time.h>
 #include<stdlib.h>
-
-#define LIN 3
+#include<limits.h>
 #define COL 3
-
+#define LINHA 3
 
     int main(){
-        int mat[LIN][COL],linha, coluna;
-        srand(time(NULL));
 
-        for(linha=0; linha<LIN ;linha++){
-         for(coluna=0; coluna<COL ; coluna++){
-            mat[linha][coluna]=rand()%10;
+        int X, O,  linha, coluna;
+        char marcador1;
+        int mat[LINHA][COL];
+
+        printf("\n vamos comecar o jogo\f");
+        printf("\n jogador 1 escolha entre X e O  ");
+        scanf("%c", &marcador1);
+
+        if(marcador1=='X'){
+            printf("\n jogador 2 joga com O");
+        }
+        else if (marcador1!='X'){
+            printf("\n jogador 2 jogas com X");
+        }
+
+         printf("\n vez do jogador 1");
+
+            printf("\n insira o numero da linha desejada");
+            scanf("%d", &linha);
+
+             printf("\n insira o numero da coluna desejada");
+             scanf("%d", &coluna);
+
+            while(coluna<=3 && linha<=3 ){
+
+
             printf("\t%d", mat[linha][coluna]);
 
             }
+
             printf("\n\n");
-        }
 
     return 0;
-
-}
