@@ -38,3 +38,70 @@ printf("\n");
 
 
 mat[3,i]= vazio
+
+
+
+
+mudança---------------------------------------------------------------------------------------------
+#include<stdlib.h>
+#define COL 3
+#define LINHA 3
+#include<stdio.h>
+#include<time.h>
+
+int main(){
+
+    int mat[LINHA][COL], linha, coluna, soma;
+    srand(time(NULL));
+
+    for(linha=0; linha<(LINHA-1); linha++){
+
+    for(coluna=0; coluna<=COL; coluna++){
+
+        mat[linha][coluna]=rand()%20;
+        
+        
+    }
+    
+    }
+    
+      
+        for(linha=0; linha<=LINHA; linha++){
+            for(coluna=0; coluna<=COL; coluna++){
+                
+                if(linha==3){
+               soma=((mat[0][coluna])+(mat[1][coluna])+(mat[2][coluna]));
+                printf("%d\t", soma);
+              }
+              
+             else {
+                 printf("%d\t", (mat[linha][coluna]));
+             }
+            }
+                printf("\n");
+              }
+       
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
