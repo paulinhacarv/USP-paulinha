@@ -1,0 +1,63 @@
+#include<stdlib.h>
+#define COL 3
+#define LINHA 3
+#include<stdio.h>
+    
+    int main(){
+
+        int X, O,  linha, coluna, espaco;
+        char marcador1;
+        char mat[LINHA][COL];
+        
+        
+        // inserir a matriz vazia
+         printf("\n vamos comecar o jogo\f");
+         printf("\f");
+         
+        for(linha=0; linha<LINHA; linha++){
+            for(coluna=0; coluna<COL; coluna++){
+                mat[linha][coluna]= '-';
+                
+                printf("%c", mat[linha][coluna]);
+                
+            }
+            printf("\n");
+        }
+        
+        //começar o jogo
+        
+        
+            for(espaco=0; espaco<=9; espaco++){
+
+            printf("\n insira o numero da linha e coluna desejada ");
+            scanf("%d%d", &linha, &coluna);
+            
+            if(mat[linha][coluna]=='-'){
+                if(espaco%2==0){
+                    mat[linha][coluna]='X';
+                }
+                else{
+                    mat[linha][coluna]='O';
+                }
+                printf("\t%c", mat[linha][coluna]);
+            }
+		    else{
+			printf("movimento errado");
+            
+            }
+            
+            if((mat[0][0]==X) && (mat[0][1]==X) && (mat[0][2]==X) ){
+                printf(" voce ganhou");
+                break;
+            }
+            if((mat[0][0]==O) && (mat[0][1]==O) && (mat[0][2]==O) ){
+                printf(" voce ganhou");
+                break;
+            }
+            
+            }
+
+            
+
+    return 0;
+    }
