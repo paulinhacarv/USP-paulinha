@@ -41,7 +41,8 @@
              for(espaco=1; espaco<=9; espaco++)
 
             printf("\n insira o numero da linha e coluna desejada ");
-            scanf("%d%d", &mat[linha][coluna]);
+            scanf("%d%d", &linha &coluna);
+	    mat[linha][coluna]='X';
             
             
             if(mat[linha][coluna]=='-'){
