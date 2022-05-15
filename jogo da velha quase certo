@@ -35,7 +35,7 @@
             
             if(mat[linha][coluna]!='-'){
 			printf("\nmovimento errado\n");
-			jogadas=-1;
+			jogadas--;
             
             }
             
@@ -78,14 +78,8 @@
                 printf(" O voce ganhou");
                 break;
             }
-            
-            
-            
-            
-            
             }
-
-            printf("deu velha");
-
+            
+            
     return 0;
     }
