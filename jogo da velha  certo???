@@ -5,7 +5,7 @@
     
     int main(){
 
-        int X, O,  linha, coluna, jogadas;
+        int X, O,  linha, coluna, jogadas, a=1;
         char marcador1;
         char mat[LINHA][COL];
         
@@ -64,6 +64,7 @@
             ((mat[0][0]==mat[1][1]) && (mat[0][0]==mat[2][2]) && (mat[0][0]=='X')) || 
             ((mat[2][0]==mat[1][1]) && (mat[2][0]==mat[0][3]) && (mat[2][0]=='X'))){
                 printf(" X voce ganhou");
+                a=0;
                 break;
             }
             
@@ -76,7 +77,11 @@
             ((mat[0][0]==mat[1][1]) && (mat[0][0]==mat[2][2]) && (mat[0][0]=='O')) || 
             ((mat[2][0]==mat[1][1]) && (mat[2][0]==mat[0][3]) && (mat[2][0]=='O'))){
                 printf(" O voce ganhou");
+                a=0;
                 break;
+            }
+            if((jogadas==8) && (a==1)){
+                printf("deu velha");
             }
             }
             
