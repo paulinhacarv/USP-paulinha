@@ -1,41 +1,63 @@
-#include<stdio.h>
 #include<stdlib.h>
-#include<limits.h>
-#define COL3 
-#define LINHA3 
-
-    int main(){
-        
-        int X=0, O, marcador1, LINHA, COL;
-        int mat[LINHA][COL];
-        
-        printf("\n vamos começar o jogo\f");
-        printf("\n jogador 1 escolha entre X e O  ");
-        scanf("%d", &marcador1);
+#define COL 3
+#define LINHA 3
+#include<stdio.h>
     
-        if(marcador1==0){
+    int main(){
+
+        int X, O,  linha, coluna, _, espaco;
+        char marcador1;
+        char mat[LINHA][COL];
+        
+        // escolher com qual simbolo cada jogador vai jogador
+        
+        
+        printf("\n jogador 1 escolha entre X e O  ");
+        scanf("%c", &marcador1);
+
+        if(marcador1=='X'){
             printf("\n jogador 2 joga com O");
         }
-        else if (marcador1!=0){
-            printf("\n jogador 2 jogas com X");
+        else if (marcador1!='X'){
+            printf(" jogador 2 joga com X ");
         }
         
-            printf("\n vez do jogador 1");
-           
-            printf("\n insira o numero da linha desejada");
-            scanf("%d", &mat[LINHA]);
-             
-             printf("\n insira o numero da coluna desejada");
-             scanf("%d", &mat[COL]);
-            
-            while(COL<=3 && LINHA<=3 ){
+        // inserir a matriz vazia
+         printf("\f");
+         
+        for(linha=1; linha<=LINHA; linha++){
+            for(coluna=1; coluna<=COL; coluna++){
+                mat[linha][coluna]= '-';
                 
-            mat[LINHA][COL]=X;
-            printf("\t%d",mat[LINHA][COL]);
+                printf("%c", mat[linha][coluna]);
+                
             }
+            printf("\n");
+        }
+        
+        //começar o jogo
+        printf("\n vamos comecar o jogo\f");
+        
+             for(espaco=1; espaco<=9; espaco++)
+
+            printf("\n insira o numero da linha e coluna desejada ");
+            scanf("%d%d", &mat[linha][coluna]);
             
             
+            if(mat[linha][coluna]=='-'){
+                if(espaco)
+		
+			if(linha>=0 && linha<=LINHA && coluna>=0 && coluna<=COL){
+            mat[linha][coluna]='X';
+            
+            printf("\t%c", mat[linha][coluna]);
+            }
+            else{
+                printf("movimento errado");
+            }
+            }
+
+            printf("\n\n");
+
     return 0;
-
-}
-
+    }
