@@ -5,22 +5,10 @@
     
     int main(){
 
-        int X, O,  linha, coluna, _, espaco;
+        int X, O,  linha, coluna, espaco;
         char marcador1;
         char mat[LINHA][COL];
         
-        // escolher com qual simbolo cada jogador vai jogador
-        
-        
-        printf("\n jogador 1 escolha entre X e O  ");
-        scanf("%c", &marcador1);
-
-        if(marcador1=='X'){
-            printf("\n jogador 2 joga com O");
-        }
-        else if (marcador1!='X'){
-            printf(" jogador 2 joga com X ");
-        }
         
         // inserir a matriz vazia
          printf("\f");
@@ -38,24 +26,25 @@
         //começar o jogo
         printf("\n vamos comecar o jogo\f");
         
-             for(espaco=1; espaco<=9; espaco++)
+            for(espaco=1; espaco<=9; espaco++){
 
             printf("\n insira o numero da linha e coluna desejada ");
-            scanf("%d%d", &linha &coluna);
-	    mat[linha][coluna]='X';
-            
+            scanf("%d%d", &linha, &coluna);
             
             if(mat[linha][coluna]=='-'){
-                if(espaco)
-		
-			if(linha>=0 && linha<=LINHA && coluna>=0 && coluna<=COL){
-            mat[linha][coluna]='X';
+                if(espaco%2 = 1){
+                    mat[linha][coluna]='X';
+                }
+                else{
+                    mat[linha][coluna]='O';
+                }
+                
+		    if(mat[linha][coluna]!='-'){
+			printf("movimento errado");
             
             printf("\t%c", mat[linha][coluna]);
             }
-            else{
-                printf("movimento errado");
-            }
+            
             }
 
             printf("\n\n");
