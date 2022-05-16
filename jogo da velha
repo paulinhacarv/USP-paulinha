@@ -1,0 +1,90 @@
+#include<stdlib.h>
+#define COL 3
+#define LINHA 3
+#include<stdio.h>
+    
+    int main(){
+
+        int linha, coluna, jogadas, a=1;
+        char mat[LINHA][COL];
+        
+        
+        // inserir a matriz vazia, apenas como um modelo para a vizualização das pessoas
+         printf("\n vamos comecar o jogo\f");
+         printf("\f\n");
+         
+        for(linha=0; linha<LINHA; linha++){
+            for(coluna=0; coluna<COL; coluna++){
+                mat[linha][coluna]= '-';
+                
+                printf("\t%c", mat[linha][coluna]);
+                
+            }
+            printf("\n\n");
+        }
+        
+        //começar o jogo
+        
+        
+            for(jogadas=0; jogadas<9; jogadas++) // dentro de um jogo da velha só existem nove espaços na matriz para inserir um símbolo,
+            {                                    // logo, só sãopossíveis nove jogadas válidas
+                
+
+            printf("\n insira o numero da linha e coluna desejada ");
+            scanf("%d%d", &linha, &coluna);
+            
+            if(mat[linha][coluna]!='-'){          // caso coloque uma linha e uma coluna que não exista na matriz do jogo, ela será 
+			printf("\n movimento errado\n");       // considerada invalida ou se for escolhido um lugar em que ja foi adicionado um símbolo
+			jogadas--;                            // descarta uma jogada para não influenciar nas 9 jogadas estabelecidas
+            
+            }
+            
+            while(mat[linha][coluna]=='-'){
+                if(jogadas%2==0){                 
+                    mat[linha][coluna]='X';
+                    
+                }
+                else{
+                    mat[linha][coluna]='O';
+                   
+                }
+                for(linha=0; linha<LINHA; linha++){
+                    for(coluna=0; coluna<COL; coluna++){
+                        printf("\t%c", mat[linha][coluna]);     // mostrar a matriz pronta após a jogada 
+                    }
+                    printf("\n\n");
+                }
+            }
+            if(((mat[0][0]==mat[0][1]) && (mat[0][0]==mat[0][2]) && (mat[0][0]=='X')) || 
+            ((mat[1][0]==mat[1][1]) && (mat[1][0]==mat[1][2]) && (mat[1][0]=='X')) ||
+            ((mat[2][0]==mat[2][1]) && (mat[2][0]==mat[2][2]) && (mat[2][0]=='X')) ||    // possibilidades em que "X" pode ganhar o jogo
+            ((mat[0][0]==mat[1][0]) && (mat[0][0]==mat[2][0]) && (mat[0][0]=='X')) ||
+            ((mat[0][1]==mat[1][1]) && (mat[0][1]==mat[2][1]) && (mat[0][1]=='X')) ||
+            ((mat[0][2]==mat[1][2]) && (mat[0][2]==mat[2][2]) && (mat[0][2]=='X')) ||
+            ((mat[0][0]==mat[1][1]) && (mat[0][0]==mat[2][2]) && (mat[0][0]=='X')) || 
+            ((mat[2][0]==mat[1][1]) && (mat[2][0]==mat[0][3]) && (mat[2][0]=='X'))){
+                printf(" X voce ganhou");
+                a=0;
+                break;
+            }
+            
+            if(((mat[0][0]==mat[0][1]) && (mat[0][0]==mat[0][2]) && (mat[0][0]=='O')) || 
+            ((mat[1][0]==mat[1][1]) && (mat[1][0]==mat[1][2]) && (mat[1][0]=='O')) ||
+            ((mat[2][0]==mat[2][1]) && (mat[2][0]==mat[2][2]) && (mat[2][0]=='O')) ||   // possibilidades em que "O" pode ganhar o jogo
+            ((mat[0][0]==mat[1][0]) && (mat[0][0]==mat[2][0]) && (mat[0][0]=='O')) ||
+            ((mat[0][1]==mat[1][1]) && (mat[0][1]==mat[2][1]) && (mat[0][1]=='O')) ||
+            ((mat[0][2]==mat[1][2]) && (mat[0][2]==mat[2][2]) && (mat[0][2]=='O')) ||
+            ((mat[0][0]==mat[1][1]) && (mat[0][0]==mat[2][2]) && (mat[0][0]=='O')) || 
+            ((mat[2][0]==mat[1][1]) && (mat[2][0]==mat[0][3]) && (mat[2][0]=='O'))){
+                printf(" O voce ganhou");
+                a=0;
+                break;
+            }
+            if((jogadas==8) && (a==1)){       // quando completado as nove jogadas, se ninguem ganhar o jogo acaba como "velha"
+                printf("deu velha");          // quando alguém ganha o valor de "a" muda para 0, se continuar como 1 é porque ninguem ganhou
+            }
+            }
+            
+            
+    return 0;
+    }
