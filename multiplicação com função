@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int multiplica(int x, int y, int z);
+
+
+
+int main(){
+
+            int x, y, z, resultado;
+            printf("insira o primeiro valor\n");
+            scanf("%d", &x);
+
+            printf("insira o segundo valor\n");
+            scanf("%d", &y);
+
+            printf("insira o terceiro valor\n");
+            scanf("%d", &z);
+
+            resultado = multiplica(x,y,z);
+
+            printf("resultado: %d", resultado);
+
+            return 0;
+            }
+
+
+ int multiplica(int x, int y, int z){
+    int resultado=x*y*z;
+    return resultado;
+}
