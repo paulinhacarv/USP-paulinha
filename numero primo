@@ -1,0 +1,47 @@
+// Paula Carvalho- número USP 13678863
+
+#include<stdio.h>
+
+int main(){
+
+    int num, primo;
+
+
+    printf("\n digite o numero\n ");
+    scanf("%d", &num);
+
+    primo=numero_primo(num);
+    if(primo){
+        printf("\n o numero e primo");
+    }else{
+        printf("\n o numero nao e primo");
+    }
+
+
+
+    return 0;
+}
+
+int numero_primo(int num){
+    int valor;
+    char res[30];
+    char divisivel[10], primo[10];
+    int divisor;
+
+    for(divisor=1; divisor<=num; divisor++){
+        valor=num%divisor;
+
+        if(valor==0 && divisor<num){
+            strcpy (res, "divisivel");
+            return 0;
+            break;
+        }
+        if(valor==0 && divisor==num){
+            strcpy (res,"primo");
+            return 1;
+            break;
+        }
+    }
+
+
+}
