@@ -1,39 +1,45 @@
 // Paula Carvalho- número USP 13678863
 
 #include<stdio.h>
+#include <locale.h>                         //biblioteca para acentuar palavras
+
+int numero_primo(int num);
 
 int main(){
 
-    int num, primo;
-
-
-    printf("\n digite o numero\n ");
+    int num, primo;                         //declaração das variáveis na funão principal
+    
+    setlocale(LC_ALL, "Portuguese");        //escolhe o idioma para a acentuação das palavras
+    
+    printf("\n digite o número\n ");        //a pessoa irá inserir o valor que deseja saber se é primo e o programa irá ler como "num"
     scanf("%d", &num);
 
-    primo=numero_primo(num);
-    if(primo){
-        printf("\n o numero e primo");
-    }else{
-        printf("\n o numero nao e primo");
+    primo=numero_primo(num);                // chama a função que calcula se o número é primo ou não 
+    
+    if(primo){                              // caso primo seja verdade, ou seja, a função tenha retornado 1, aparecrá na tela que o número é primo
+        printf("\n o número é primo");
+    }else{                                  //caso primo seja falso, ou seja, a função tenha retornado 0, aparecerá que o número não é primo  
+        printf("\n o número não é primo");
     }
-
-
 
     return 0;
 }
 
-int numero_primo(int num){
-    int valor;
-    int divisor;
+int numero_primo(int num){                       //função para calcular se o número é primo ou não 
+    
+    int valor;                                   //*
+    int divisor;                                 //*  declaração das variáveis dessa função
 
-    for(divisor=2; divisor<=num; divisor++){
-        valor=num%divisor;
-
-        if(valor==0 && divisor<num){
-            return 0;
+    for(divisor=2; divisor<=num; divisor++){     //* o numero que a pessoa escolheu será dividido por todos os números inteiros, começando
+                                                 //* pelo 2, até o número igual a ele mesmo 
+        valor=num%divisor;                       //o resto do num pelo divisor sera representado por "valor"
+        
+        if(valor==0 && divisor<num){             //* se o resto da divisão for igual a zero, ou seja, o número é divisível, mas o "divisor" for 
+            return 0;                            //* menor do que "num", o número digitado não será primo, logo retorna como 0
         }
-        if(valor==0 && divisor==num){
-            return 1;
+        if(valor==0 && divisor==num){            //* se o resto da divisão for igual a zero, e o "divisor" for igual a "num", ou seja, só é divisível
+            return 1;                            //* por ele mesmo, o número escolhido é primo, logo retorna como 1
         }
     }
 }
+
