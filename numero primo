@@ -24,24 +24,16 @@ int main(){
 
 int numero_primo(int num){
     int valor;
-    char res[30];
-    char divisivel[10], primo[10];
     int divisor;
 
-    for(divisor=1; divisor<=num; divisor++){
+    for(divisor=2; divisor<=num; divisor++){
         valor=num%divisor;
 
         if(valor==0 && divisor<num){
-            strcpy (res, "divisivel");
             return 0;
-            break;
         }
         if(valor==0 && divisor==num){
-            strcpy (res,"primo");
             return 1;
-            break;
         }
     }
-
-
 }
