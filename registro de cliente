@@ -1,0 +1,47 @@
+#include<string.h>
+#include<stdio.h>
+
+typedef struct{
+    char nome[30];
+    char snome[30];
+    int idade;
+
+} t_cliente;
+
+void printcliente (t_cliente cliente);
+
+int main(){
+
+    t_cliente cliente[3];
+
+    strcpy(cliente[0].nome,"Joao");
+    strcpy(cliente[0].snome,"Alves");
+    cliente[0].idade = 20;
+
+    strcpy(cliente[1].nome,"ricardo");
+    strcpy(cliente[1].snome,"silva");
+    cliente[1].idade = 02;
+
+    strcpy(cliente[2].nome,"joana");
+    strcpy(cliente[2].snome,"santyana");
+    cliente[2].idade = 45;
+
+    strcpy(cliente[3].nome,"saulo");
+    strcpy(cliente[3].snome,"mauro");
+    cliente[3].idade = 10;
+
+     printcliente (cliente[0]);
+     printcliente (cliente[1]);
+     printcliente (cliente[2]);
+     printcliente (cliente[3]);
+
+
+    return 0;
+}
+
+void printcliente ( t_cliente cliente ){
+    printf("\n nome: %s\n", cliente.nome);
+    printf("sobrenome: %s\n", cliente.snome);
+    printf("idade: %d\n", cliente.idade);
+}
+
