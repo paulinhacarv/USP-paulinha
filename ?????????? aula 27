@@ -1,0 +1,32 @@
+#include<string.h>
+#include<stdio.h>
+#include<time.h>
+#include<limits.h>
+
+typedef struct{
+    int id;
+    int nota;
+} t_aluno;
+
+int main(){
+    
+    t_aluno aluno[10];
+    
+    
+    for(aluno=0; aluno<=10; aluno++)
+    
+     printf("aluno:")
+}
+
+void calculanota (t_aluno aluno){
+    srand(time(NULL));
+    for(aluno=0; aluno<=10; aluno++){
+        aluno.nota=rand()%10;
+}}
+
+void geraid (t_aluno aluno){
+    srand(time(NULL));
+    for(aluno=0; aluno<=10; aluno++){
+        aluno.id=rand()%99;
+    }
+}
