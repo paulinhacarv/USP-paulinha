@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<time.h>
+#include<limits.h>
+#define SIZE 10
+
+void ler_vetor(int*a);
+
+int main(){
+    int vet[SIZE], x,*a;
+    srand(time(NULL));
+
+    for(x=0; x<=SIZE; x++){
+        vet[x]=rand()%40;
+    }
+
+    for(x=0; x<=SIZE; x++){
+        printf("%d \n", vet[x]);
+    }
+
+    a=&vet[4];
+
+    printf("\n terceiro vetor = %d", a[-2]);
+}
