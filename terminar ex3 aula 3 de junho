@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<time.h>
+#include<limits.h>
+#define SIZE 10
+
+typedef struct{
+    int idade;
+    int id;
+
+} t_aluno;
+
+int main(){
+    t_aluno aluno[10];
+}
+
+void printaluno ( t_aluno aluno ){
+    int x, y, id;
+    for(x=1; x<11; x++){
+        id=x;
+    }
+    for(y=0; y<= SIZE; y++){
+        aluno[y]=rand()%30;
+    }
