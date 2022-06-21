@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define TAM 46
 
 struct registro{
@@ -45,7 +46,8 @@ int main() {
        printf("\nresposta: %s\ndica: %s\norientacao: %s\n", r.resposta, r.dicas, r.orientacao);
        
        printf("\n aperte s se quiser sair ");
-       scanf("%c\n", &i);
+       i=getchar();
+       if (i!='s'){i=0;}
    
    }
     
