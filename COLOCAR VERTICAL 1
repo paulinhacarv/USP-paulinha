@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    int x;
+    int LINHA, COL, linha, coluna;
+    char str[] = "abcdefgh";
+    LINHA = strlen(str);
+    COL = strlen(str);
+    char mat[LINHA][COL];
+    
+   
+    for(linha=0; linha<LINHA; linha++){
+        for(coluna=0; coluna<COL; coluna++){
+            mat[linha][coluna]='-';
+            printf("\t%c", mat[linha][coluna]);
+            
+        }
+        printf("\n\n");
+    }
+        
+    for(linha=0; linha<LINHA; linha++){
+        x=linha; 
+        mat[linha][3] = str[x];
+    }  
+    
+    printf("\n\n");
+    
+    for(linha=0; linha<LINHA; linha++){
+        for(coluna=0; coluna<COL; coluna++){
+            printf("\t%c", mat[linha][coluna]);    
+        }
+        printf("\n\n");
+    }
+    
+    return 0;
+}
