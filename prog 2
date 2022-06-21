@@ -1,0 +1,53 @@
+#include <stdio.h>
+#define TAM 46
+
+struct registro{
+    char resposta[TAM];
+    char dicas[TAM];
+    char orientacao[TAM];
+};
+
+//struct registro recebe_array(char resposta, char dicas, char orientacao){
+ //   struct registro r;
+ //   char i=0;
+//    while(i!='s'){
+ //   printf("\n escreva a resposta: ");
+//    gets(r.resposta);
+ //   printf("\n escreva a dica: ");
+ //   gets(r.dicas);
+ //   printf("\n escreva a orientacao: ");
+ //   gets(r.orientacao);
+ //   printf("\n aperte s se quiser sair");
+ //   scanf("%c", &i);
+  //  }
+   
+ //   return r;
+//}
+
+int main() {
+    struct registro r;
+   
+    
+   // struct registro recebe_array(char resposta, char dicas, char orientacao);
+   char i='0';
+   
+   while(i!='s'){
+       
+       printf("\n escreva a dica: ");
+       gets(r.dicas);
+       
+       printf("\n escreva a resposta: ");
+       gets(r.resposta);
+       
+       printf("\n escreva a orientacao: ");
+       gets(r.orientacao);
+       
+       printf("\nresposta: %s\ndica: %s\norientacao: %s\n", r.resposta, r.dicas, r.orientacao);
+       
+       printf("\n aperte s se quiser sair ");
+       scanf("%c\n", &i);
+   
+   }
+    
+    return 0;
+}
