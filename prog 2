@@ -61,3 +61,108 @@ struct registro r;
 
        printf("\n aperte s se quiser sair ");
 }
+
+
+
+
+
+*********************************************************nao sei o que fiz**************************************************************
+
+#include <stdio.h>
+#define TAM 46
+#define SIZE 400
+
+void poggers();
+
+struct registro
+{
+    char resposta[TAM];
+    char dicas[TAM];
+    char orientacao[TAM];
+};
+
+int main()
+{
+
+    struct registro r;
+    int o;
+    char i='ì';
+    char *di;
+    char *re;
+    char *or;
+    char vet1[SIZE];
+    char vet2[SIZE];
+    char vet3[SIZE];
+    int tamanho;
+        for(o=0; o<=SIZE ; o++)
+        {
+
+    while(i!='s'){
+            //poggers();
+            scanf("");
+            printf("\n escreva a dica: ");
+            scanf(" %s",r.dicas );
+            tamanho = strlen(r.dicas);
+            di=(char*)malloc(sizeof(char)*tamanho);
+
+            strcpy(di,r.dicas);
+
+            //di=
+            vet1[o]=di;
+            printf("\n escreva a resposta: ");
+            scanf(" %s",r.resposta );
+            tamanho = strlen(r.resposta);
+            re=(char*)malloc(sizeof(char)*tamanho);
+
+            strcpy(re,r.resposta);
+            //re=
+            vet2[o]=re;
+
+            printf("\n escreva a orientacao: ");
+            scanf(" %s",r.orientacao );
+            tamanho = strlen(r.orientacao);
+            or=(char*)malloc(sizeof(char)*tamanho);
+
+            strcpy(or,r.orientacao);
+
+            //or=
+            vet3[o]=or;
+
+            printf("\n dica: %s\n resposta: %s\n orientacao: %s\n", vet1[o], vet2[o], vet3[o]);
+
+            printf("\n aperte s se quiser sair ");
+            scanf (" %c",&i);
+            printf("\n");
+    }
+
+        }
+
+    return 0;
+}
+
+/*
+void poggers(){
+
+struct registro r;
+char *di;
+   char *re;
+   char *or;
+
+       scanf("");
+       printf("\n escreva a dica: ");
+       scanf(" %s",&r.dicas );
+       *di=r.dicas;
+
+       printf("\n escreva a resposta: ");
+       scanf(" %s",&r.resposta );
+       *re=r.resposta;
+
+       printf("\n escreva a orientacao: ");
+       scanf(" %s",&r.orientacao );
+       *or=r.orientacao;
+
+       printf("\n dica: %s\n resposta: %s\n orientacao: %s\n", r.dicas, r.resposta, r.orientacao);
+
+       printf("\n aperte s se quiser sair ");
+}
+*/
