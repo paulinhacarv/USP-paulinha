@@ -16,8 +16,9 @@ int main() {
     for(linha=0; linha<LINHA; linha++){
         for(coluna=0; coluna<COL; coluna++){
             mat[linha][coluna]='-';
+            printf("\t%c", mat[linha][coluna]);
         }
-        
+         printf("\n\n");
     }
     
    
@@ -30,9 +31,9 @@ int main() {
     
     for(linha=0; linha<LINHA; linha++){
         for(coluna=0; coluna<COL; coluna++){
-            printf("\t%c", mat[linha][coluna]);    
+               
         }
-        printf("\n\n");
+       
     }
     
     
@@ -40,7 +41,7 @@ int main() {
     int y;
     char ot[20];
     
-    printf("orientacao na matriz");
+    printf("orientacao na matriz: ");
     scanf("%s", ot);
     
     printf("procurar nome e orientacao na matriz:");
@@ -52,9 +53,10 @@ int main() {
         
         }else if(strcmp(str,nome)){
             printf("tente de novo");
-        }else  printf("voce acertou!!");
+            
+        }else printf("voce acertou!!\n");
         
-       
+ 
       
     
     return 0;
