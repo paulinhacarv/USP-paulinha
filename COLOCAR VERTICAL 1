@@ -6,20 +6,21 @@ int main() {
     int x;
     int LINHA, COL, linha, coluna;
     char str[] = "abcdefgh";
+    
     LINHA = strlen(str);
     COL = strlen(str);
     char mat[LINHA][COL];
+  
     
    
     for(linha=0; linha<LINHA; linha++){
         for(coluna=0; coluna<COL; coluna++){
             mat[linha][coluna]='-';
-            printf("\t%c", mat[linha][coluna]);
-            
         }
-        printf("\n\n");
-    }
         
+    }
+    
+   
     for(linha=0; linha<LINHA; linha++){
         x=linha; 
         mat[linha][3] = str[x];
@@ -34,5 +35,28 @@ int main() {
         printf("\n\n");
     }
     
+    
+    char nome[200], ori[20];
+    int y;
+    char ot[20];
+    
+    printf("orientacao na matriz");
+    scanf("%s", ot);
+    
+    printf("procurar nome e orientacao na matriz:");
+    scanf("%s %s", nome, ori);
+    
+    
+    if(strcmp (ot,ori)){
+        printf("tente de novo");
+        
+        }else if(strcmp(str,nome)){
+            printf("tente de novo");
+        }else  printf("voce acertou!!");
+        
+       
+      
+    
     return 0;
 }
+
