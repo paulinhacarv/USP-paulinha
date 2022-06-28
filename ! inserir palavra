@@ -69,6 +69,8 @@ struct registro r;
 *********************************************************nao sei o que fiz**************************************************************
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #define TAM 46
 #define SIZE 400
 
@@ -89,11 +91,12 @@ int main()
     char i='ì';
     char *di;
     char *re;
-    char *or;
+    char *ori;
     char vet1[SIZE];
     char vet2[SIZE];
     char vet3[SIZE];
     int tamanho;
+        
         for(o=0; o<=SIZE ; o++)
         {
 
@@ -121,14 +124,14 @@ int main()
             printf("\n escreva a orientacao: ");
             scanf(" %s",r.orientacao );
             tamanho = strlen(r.orientacao);
-            or=(char*)malloc(sizeof(char)*tamanho);
+            ori=(char*)malloc(sizeof(char)*tamanho);
 
-            strcpy(or,r.orientacao);
+            strcpy(ori,r.orientacao);
 
             //or=
-            vet3[o]=or;
+            vet3[o]= ori;
 
-            printf("\n dica: %s\n resposta: %s\n orientacao: %s\n", vet1[o], vet2[o], vet3[o]);
+            printf("\n dica: %s\n resposta: %s\n orientacao: %s\n", di, re, ori);
 
             printf("\n aperte s se quiser sair ");
             scanf (" %c",&i);
@@ -139,30 +142,3 @@ int main()
 
     return 0;
 }
-
-/*
-void poggers(){
-
-struct registro r;
-char *di;
-   char *re;
-   char *or;
-
-       scanf("");
-       printf("\n escreva a dica: ");
-       scanf(" %s",&r.dicas );
-       *di=r.dicas;
-
-       printf("\n escreva a resposta: ");
-       scanf(" %s",&r.resposta );
-       *re=r.resposta;
-
-       printf("\n escreva a orientacao: ");
-       scanf(" %s",&r.orientacao );
-       *or=r.orientacao;
-
-       printf("\n dica: %s\n resposta: %s\n orientacao: %s\n", r.dicas, r.resposta, r.orientacao);
-
-       printf("\n aperte s se quiser sair ");
-}
-*/
