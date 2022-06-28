@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    int x;
+    int LINHA, COL, linha, coluna;
+    char str[] = "abcdefgh";
+    int palavra;
+    int k=0;
+    LINHA = strlen(str);
+    COL = strlen(str);
+    char mat[LINHA][COL];
+  
+    
+   
+    for(linha=0; linha<LINHA; linha++){
+        for(coluna=0; coluna<COL; coluna++){
+            mat[linha][coluna]='-';
+            printf("\t%c", mat[linha][coluna]);
+        }
+         printf("\n\n");
+    }
+    
+   
+    for(linha=0; linha<LINHA; linha++){
+        x=linha; 
+        mat[linha][3] = str[x];
+    }  
+    
+    printf("\n\n");
+    
+    for(linha=0; linha<LINHA; linha++){
+        for(coluna=0; coluna<COL; coluna++){
+               
+        }
+       
+    }
+    
+    
+    char nome[200], ori[20];
+    int y;
+    char ot[20];
+    
+    printf("orientacao na matriz: ");
+    scanf("%s", ot);
+    
+    for(y=0; y<=palavra; y++){
+    printf("\n procurar nome e orientacao na matriz:");
+    scanf("%s %s", nome, ori);
+    
+    while(k==0){
+    if(strcmp (ot,ori)){
+        printf("tente de novo");
+        y--;
+        break;
+        }else if(strcmp(str,nome)){
+            printf("tente de novo");
+            y--;
+            break;
+        }else printf("voce acertou!!\n");
+            for(linha=0; linha<LINHA; linha++){
+            for(coluna=0; coluna<COL; coluna++){
+                printf("\t%c", mat[linha][coluna]);
+        }
+            printf("\n\n");
+    }
+    break;
+      
+    }
+    }
+    return 0;
+}
