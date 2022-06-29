@@ -3,17 +3,16 @@
 #include <string.h>
 #include <math.h>
 
-int * sequencia[99];
+char *sequencia[99];
 
-int recebimento(int numero_palavras);
+int recebimento();
 void ordenador(int numero_palavras);
-int * teste_juntar(int l1, int l2, char *str1, char *str2);
 
 int main()
 {
     int natural=0;
     int numero_palavras;
-    numero_palavras=recebimento(numero_palavras);
+    numero_palavras=recebimento();
     ordenador(numero_palavras);
     for (natural=0; natural<numero_palavras*3; natural++)
     {
@@ -25,10 +24,10 @@ int main()
     }
 }
 
-int recebimento(int numero_palavras)
+int recebimento()
 {
     int natural=0;
-    numero_palavras;
+    int numero_palavras;
     char dica[33][100];
     char palavra[33][50];
     char orientacao[33][10];
@@ -75,33 +74,35 @@ return numero_palavras;
 
 void ordenador(int numero_palavras)
 {
-    numero_palavras;
+    char aux[100];
+    char aux2[100];
+    char aux3[100];
     int natural=0;
+    int natural2=1;
 
-}
-
-/*int * teste_juntar(int l1, int l2, char *str1, char *str2)
-{
-
-    int teste = 0;
-    str1 = (char*)realloc(str1, sizeof(char)*l1 +1);
-    str2 = (char*)realloc(str2, sizeof(char)*l2 +1);
-    int *vet;
-    vet = malloc(sizeof(int)*2);
-    vet[0] = -1;
-    vet[1] = -1;
-
-    for (int i = 0; i < l1; i++)
-    {
-        for (int j = 0; j < l2; j++)
+    for (natural=1;natural<=numero_palavras*3-1;natural=natural+3)
         {
-            if ((str1[i] == str2[j]) && (str1[i] != '\n')   && (str1[i] != '\0'))
+        int tamanho1=strlen(sequencia[natural]);
+        int tamanho2=strlen(sequencia[natural+3]);
+        if (tamanho1<tamanho2)
+
             {
-                vet[0] = i;
-                vet[1] = j;
-                return vet;
+              strcpy(aux,sequencia[natural-1]);
+              strcpy(aux2,sequencia[natural]);
+              strcpy(aux3,sequencia[natural+1]);
+
+              strcpy(sequencia[natural-1],sequencia[(numero_palavras*3)-natural2]-1);
+              strcpy(sequencia[natural],sequencia[(numero_palavras*3)-natural2]);
+              strcpy(sequencia[natural+1],sequencia[(numero_palavras*3)-natural2+1]);
+
+              strcpy(sequencia[(numero_palavras*3)-natural2-1],sequencia[natural-1]);
+              strcpy(sequencia[(numero_palavras*3)-natural2],sequencia[natural]);
+              strcpy(sequencia[(numero_palavras*3)-natural2+1],sequencia[natural+1]);
+
+              natural2=natural2+3;
+              natural=1;
+
             }
+
         }
-    }
-    return vet;
-}*/
+}
