@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    int x;
+    int LINHA, COL, linha, coluna;
+    char str[] = "gato";
+    char str1[]="cachorro";
+    int palavra;
+    int k=0;
+    LINHA = (strlen(str)+strlen(str1))*2;
+    COL = (strlen(str)+strlen(str1))*2;
+    char mat[LINHA][COL];
+    int somatamanhos=strlen(str)+strlen(str1);
+  int l1 =strlen(str);
+    int l2=strlen(str1);
+    char *str, char *str1;
+    teste_juntar( l1,  l2,  *str,  *str1);
+    for(linha=0; linha<LINHA; linha++){
+        for(coluna=0; coluna<COL; coluna++){
+            mat[linha][coluna]='-';
+            printf(" %c ", mat[linha][coluna]);
+        }
+         printf("\n\n");
+    }
+    
+   
+    for(linha=0; linha<strlen(str); linha++){
+        x=linha; 
+        mat[linha][somatamanhos] = str[linha];
+    } 
+    
+    for(coluna=0; coluna<strlen(str1); coluna++){
+        x=coluna; 
+        mat[vet[0]][coluna+(somatamanhos)-vet[1] = str1[x];
+    }  
+    
+    printf("\n\n");
+    
+   
+   
+    
+    char nome[200], ori[20];
+    int y;
+    char ot[20];
+    
+    printf("nome orientacao na matriz: ");
+    scanf("%s %s", str, ot);
+    
+    for(y=0; y<=palavra; y++){
+    printf("\n procurar nome e orientacao na matriz: ");
+    scanf("%s %s", nome, ori);
+    
+    while(k==0){
+    if(strcmp (ot,ori)){
+        printf("\n tente de novo");
+        y--;
+        break;
+        }else if(strcmp(str,nome)){
+            printf("\n tente de novo");
+            y--;
+            break;
+        }else printf("\n voce acertou!!\n");
+            for(linha=0; linha<LINHA; linha++){
+            for(coluna=0; coluna<COL; coluna++){
+                printf(" %c ", mat[linha][coluna]);
+        }
+            printf("\n\n");
+    }
+    break;
+      
+    }
+    }
+    return 0;
+}
+
+
+int* teste_juntar(int l1, int l2, char *str, char *str1)
+{
+    int l1 =strlen(str);
+    int l2=strlen(str1);
+    int teste = 0;
+    str = (char*)realloc(str, sizeof(char)*l1 +1);
+    str1 = (char*)realloc(str1, sizeof(char)*l2 +1);
+    int *vet;
+    vet = malloc(sizeof(int)*2);
+    vet[0] = -1;
+    vet[1] = -1;
+    
+    for (int i = 0; i < l1; i++)
+    {
+        for (int j = 0; j < l2; j++)
+        {
+            if ((str1[i] == str2[j]) && (str1[i] != '\n')   && (str1[i] != '\0'))
+            {
+                vet[0] = i;
+                vet[1] = j;
+            
+                return vet;
+                
+                
+            }
+        }
+    }
+    return vet;
+}
