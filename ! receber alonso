@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+typedef struct 
+{
+    char dicas[40];
+    char respostas[40];
+    int orientacao;
+
+}registro;
+
+
+int main()
+{
+    
+    int n;
+    char o[12];
+    registro palavra[n];
+    printf("Bem vindo a palavra cruzada, construa o jogo\n");
+    for( n = 0; n < 10; n++)
+    {   
+        
+        
+        printf("Digite a pergunta: ");
+        fgets (palavra[n].dicas, 40, stdin);
+        printf("Digite a resposta: ");
+        fgets (palavra[n].respostas, 40, stdin);
+        printf("Digite a orientacao: ");
+        //scanf("%s", o);
+        fgets(o,12,stdin);
+        fflush(stdin);
+        
+        
+        if ((strcmp(o,"horizontal\n")==0)||(strcmp(o,"Horizontal\n")==0)||(strcmp(o,"h\n")==0))
+            {
+                palavra[n].orientacao = 1;
+            }
+        else if ((strcmp(o,"vertical\n")==0)||(strcmp(o,"Vertical\n")==0)||(strcmp(o,"v\n")==0))
+            {
+                palavra[n].orientacao = 0;
+            }
+    
+
+
+        printf("%s\n", palavra[n].dicas);
+        printf("%s\n", palavra[n].respostas);
+        printf("%d\n", palavra[n].orientacao);
+    }
+    return 0;
+}
