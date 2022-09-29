@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int base, expo, resul=1, g=0, i;
+    
+    cout<<"valor da base"<<endl;
+    cin>>base;
+    
+    while(g==0){
+    cout<<"valor do exponte"<<endl;
+    cin>>expo;
+    if(expo>=0){
+       g=1;
+        }
+    } 
+    
+    for( i=1; i<=expo; i++){
+        resul=resul*base;
+    }
+    
+    cout<<"valor da potenciacao ="<<resul ;
+
+    return 0;
+}
