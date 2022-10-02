@@ -1,0 +1,23 @@
+float seno(int n){
+    int i;
+    float res=0, ang;
+
+    for(i=0; i<n; i++){
+        cout << "Digite o valor do angulo em radianos" << endl;
+        cin >> ang;
+
+        res = ang - ((ang*ang*ang)/6) + ((ang*ang*ang*ang*ang)/120) - ((ang*ang*ang*ang*ang*ang*ang)/5040);
+
+        cout << "O valor do seno o angulo " << ang << " e igual: " << res << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Digite um valor n" << endl;
+    cin >> n;
+
+    seno(n);
+    return 0;
+}
