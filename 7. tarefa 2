@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+float soma(){
+    float soma=0;
+    float j, i=2, k;
+    for(j=50; j>=1; j--){
+        k=i/j;
+        i=i*2;
+        soma=soma+k;
+    }
+    return soma;
+}
+
+int main()
+{
+    
+    cout<<" resultado de (2¹/50)+(2²/49)+(2³/48)+...+(2^50/1) = "<<soma();
+    
+    return 0;
+}
