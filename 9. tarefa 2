@@ -1,0 +1,39 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+float pi(){
+    float soma=0;
+    float j, i,k,x, p;
+    for(j=1; j>=1 ; j=j+2){
+        i=j*j*j;
+        k=1/i;
+        if(k<0.0001){
+            break;
+        }
+        soma=soma+k;
+    }
+    cout<<soma<<endl;
+    x=soma*32.0;
+    cout<<x<<endl;
+    p=pow(x,1.0/3.0);
+    cout<<p<<endl;
+    return p;
+}
+
+int main()
+{
+    float r, per, y;
+    
+    cout<<"valor do raio do circulo para calcular o perimetro";
+    cin>>r;
+    
+    y=pi();
+    per=2*y*r;
+    
+    cout<<"valor do perimetro ="<<per;
+    
+
+    return 0;
+}
