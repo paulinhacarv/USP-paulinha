@@ -10,11 +10,12 @@ int main()
     cout<<"valor de n"<<endl;
     cin>>n;
     
+    j=n;
+    
     for(i=1; i<=n; i++){
-        for(j=n; j>=1; j--){
-            k=i/j;
-            resul=resul+k;
-        }
+        k=i/j;
+        j=j-1;
+        resul=resul+k;
     }
     
     cout<<" resultado = "<<resul;
