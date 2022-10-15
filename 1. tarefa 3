@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+float resultado(float i, float f, float h){
+    int x1=i, soma=0, x2, parcela;
+    while(x2<f){
+        x2=x1+h;
+        parcela= ((1/(1+(x1*x1))) + (1/(1+(x1*x1))))/2;
+        soma=soma+(parcela*h);
+        x1=x2;
+    }
+    return soma;
+}
+
+float math(float s){
+    float p;
+    p=s*4;
+    
+    return p;
+}
+
+int main()
+{
+    float soma, inicial, final, n, h, pi;
+    cout<<"inserir o intervalo inicial e final  ";
+    cin>>inicial>> final;
+    
+    cout<<"numero de divisão em partes iguais  ";
+    cin>>n;
+    
+    h=(final - inicial)/n;
+    
+    soma=resultado(inicial, final, h);
+    
+    cout<<"o valor = "<<math(soma)<<endl;
+    
+    
+    
+    return 0;
+}
