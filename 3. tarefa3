@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+float calculaRaiz(float num){
+    float x, raiz, k=1;
+    x=num/2;
+    while(k>0.0001){
+      raiz=((x*x)+num)/(2*x);
+      k=x-raiz;
+      x=raiz;
+    }
+    return raiz;    
+}
+
+int main()
+{
+    int y;
+    
+    cout<<"digite o numero ";
+    cin>>y;
+    
+    cout<<"a raiz = "<<calculaRaiz(y)<<endl;
+    return 0;
+}
