@@ -9,20 +9,23 @@ float coefa(int num, float mult, float somax, float somay, float xx){
 
 float coefb(float somay, float xx, float somax, float mult, int num){
     float b;
-    b=
+    b=((somay*xx)-(somax*mult))/((num*xx)-(somax*somax));
+    return b;
     
 }
 
 int main()
 {
-    cout<<"quantidade de pontos";
+    float a, b, pont,x, y, sx=0, sy=0,syx=0,sxx=0, k=1;
+    
+    cout<<"quantidade de pontos ";
     cin>>pont;
     
-    while(k>pont){
-        cout<<"coordenada x";
+    while(k<=pont){
+        cout<<"coordenada x ";
         cin>>x;
         
-        cout<<"coordenada y";
+        cout<<"coordenada y ";
         cin>>y;
         
         sx=sx+x;
@@ -30,7 +33,14 @@ int main()
         syx=syx+(x*y);
         sxx=sxx+(x*x);
         
+        k++;
+        
     }
-
+    
+    a=coefa(pont, syx, sx, sy, sxx);
+    
+    b=coefb (sy, sxx, sx, syx, pont);
+    
+    cout<<"o coeficiente a = "<<a<<"e o coeficiente b da reta = "<<b<<endl;
     return 0;
 }
