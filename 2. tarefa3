@@ -1,6 +1,17 @@
 #include <iostream>
 
 using namespace std;
+float coefa(int num, float mult, float somax, float somay, float xx){
+    float a;
+    a=((num*mult)-(somax*somay))/((num*xx)-(somax*somax));
+    return a;
+}
+
+float coefb(float somay, float xx, float somax, float mult, int num){
+    float b;
+    b=
+    
+}
 
 int main()
 {
