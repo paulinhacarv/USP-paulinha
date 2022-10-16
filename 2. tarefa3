@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"quantidade de pontos";
+    cin>>pont;
+    
+    while(k>pont){
+        cout<<"coordenada x";
+        cin>>x;
+        
+        cout<<"coordenada y";
+        cin>>y;
+        
+        sx=sx+x;
+        sy=sy+y;
+        syx=syx+(x*y);
+        sxx=sxx+(x*x);
+        
+    }
+
+    return 0;
+}
